@@ -494,7 +494,7 @@ int ezusb_load_eeprom (IOUSBDeviceInterface** dev, NSString* hexfilePath,
     }
 
     /* write the config byte for FX, FX2 */
-    else if(partType == ptAN21)
+    else if(partType == ptAN21 || partType == ptFX2LP)
     {
         value = config;
         status = ezusb_write (dev, @"write config byte",
